@@ -13,3 +13,10 @@ The driver function is defined as `devices_data_etl` and performs below operatio
 1. Read the devices data from the postgres
 2. Perform the aggregations to calculate max temperature, number of data points and the device distance during the period of one hour.
 3. Store the aggregated results into the MySQL database.
+
+The file `main/main.py` has been updated to `commit` the devices_data insert record operation.  
+The dockerfile `analytics/Dockerfile` is updated to build additional required dependencies required:
+- pandas: To manipulate the data.
+- geopy: To calculate the distance between two gps coordinates.
+- pymysql & cryptography: To connect to the MySQL.
+
