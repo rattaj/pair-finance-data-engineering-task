@@ -15,7 +15,7 @@ The driver function is defined as `devices_data_etl` and performs below operatio
 3. Store the aggregated results into the MySQL database.
 
 The file `main/main.py` has been updated to `commit` the devices_data insert record operation.  
-The dockerfile `analytics/Dockerfile` is updated to build additional required dependencies required:
+The dockerfile `analytics/Dockerfile` is updated to the build additional required dependencies such as:
 - pandas: To manipulate the data.
 - geopy: To calculate the distance between two gps coordinates.
 - pymysql & cryptography: To connect to the MySQL.
